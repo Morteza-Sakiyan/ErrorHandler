@@ -1,4 +1,4 @@
-package com.sepanta.controlkit.errorhandler
+package com.sepanta.errorhandler
 
 /*
  *  File: ErrorEntityRegistry.kt

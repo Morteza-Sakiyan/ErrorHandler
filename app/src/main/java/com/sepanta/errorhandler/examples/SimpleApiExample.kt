@@ -1,16 +1,16 @@
-package com.sepanta.controlkit.errorhandler.examples
+package com.sepanta.errorhandler.examples
 
 import android.util.Log
 import com.sepanta.controlkit.errorhandler.*
-import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.ResponseBody
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.HttpException
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import java.io.IOException
+import java.net.SocketTimeoutException
 
 /**
  * Simple example for API error handling
@@ -92,10 +92,10 @@ class SimpleApiExample {
                 callback(Result.failure(error))
             }
             "timeout" -> {
-                callback(Result.failure(java.net.SocketTimeoutException("Request timeout")))
+                callback(Result.failure(SocketTimeoutException("Request timeout")))
             }
             "network" -> {
-                callback(Result.failure(java.io.IOException("No internet connection")))
+                callback(Result.failure(IOException("No internet connection")))
             }
             else -> {
                 // Success

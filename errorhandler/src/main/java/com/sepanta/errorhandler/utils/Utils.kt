@@ -1,14 +1,14 @@
-package com.sepanta.controlkit.errorhandler.utils
+package com.sepanta.errorhandler.utils
 /*
  *  File: ErrorEntityRegistry.kt
  *
  *  Created by morteza on 9/9/25.
  */
 import com.google.gson.Gson
-import com.sepanta.controlkit.errorhandler.ApiError
-import com.sepanta.controlkit.errorhandler.ErrorEntityRegistry
-import com.sepanta.controlkit.errorhandler.GenericErrorEntity
-import com.sepanta.controlkit.errorhandler.IErrorEntity
+import com.sepanta.errorhandler.ApiError
+import com.sepanta.errorhandler.ErrorEntityRegistry
+import com.sepanta.errorhandler.GenericErrorEntity
+import com.sepanta.errorhandler.IErrorEntity
 
 fun convertErrorBody(
     error: String?,

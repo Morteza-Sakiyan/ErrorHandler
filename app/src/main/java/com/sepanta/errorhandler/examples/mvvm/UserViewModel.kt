@@ -1,4 +1,4 @@
-package com.sepanta.controlkit.errorhandler.examples.mvvm
+package com.sepanta.errorhandler.examples.mvvm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -8,6 +8,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.ResponseBody
+import retrofit2.HttpException
+import retrofit2.Response
+import java.io.IOException
+import java.net.SocketTimeoutException
 
 /**
  * MVVM example using ErrorHandler
@@ -241,18 +246,18 @@ class UserRepository {
         return when (userId) {
             "404" -> throw createNotFoundException("User not found")
             "500" -> throw createServerException("Server error")
-            "timeout" -> throw java.net.SocketTimeoutException("Request timeout")
-            "network" -> throw java.io.IOException("No internet connection")
+            "timeout" -> throw SocketTimeoutException("Request timeout")
+            "network" -> throw IOException("No internet connection")
             else -> User(userId, "Sample User", "user@example.com", true)
         }
     }
 
-    private fun createValidationException(field: String, message: String): retrofit2.HttpException {
+    private fun createValidationException(field: String, message: String): HttpException {
         val errorJson = """{"message": "$message", "field": "$field", "value": null}"""
-        return retrofit2.HttpException(
-            retrofit2.Response.error<User>(
+        return HttpException(
+            Response.error<User>(
                 422,
-                okhttp3.ResponseBody.create(
+                ResponseBody.create(
                     "application/json".toMediaType(),
                     errorJson
                 )
@@ -260,13 +265,13 @@ class UserRepository {
         )
     }
 
-    private fun createLoginException(message: String): retrofit2.HttpException {
+    private fun createLoginException(message: String): HttpException {
         val errorJson =
             """{"message": "$message", "field": "credentials", "code": "INVALID_CREDENTIALS"}"""
-        return retrofit2.HttpException(
-            retrofit2.Response.error<User>(
+        return HttpException(
+            Response.error<User>(
                 401,
-                okhttp3.ResponseBody.create(
+                ResponseBody.create(
                     "application/json".toMediaType(),
                     errorJson
                 )
@@ -274,12 +279,12 @@ class UserRepository {
         )
     }
 
-    private fun createAuthException(message: String): retrofit2.HttpException {
+    private fun createAuthException(message: String): HttpException {
         val errorJson = """{"message": "$message", "token": null, "expiresAt": null}"""
-        return retrofit2.HttpException(
-            retrofit2.Response.error<User>(
+        return HttpException(
+            Response.error<User>(
                 403,
-                okhttp3.ResponseBody.create(
+                ResponseBody.create(
                     "application/json".toMediaType(),
                     errorJson
                 )
@@ -287,11 +292,11 @@ class UserRepository {
         )
     }
 
-    private fun createNotFoundException(message: String): retrofit2.HttpException {
-        return retrofit2.HttpException(
-            retrofit2.Response.error<User>(
+    private fun createNotFoundException(message: String): HttpException {
+        return HttpException(
+            Response.error<User>(
                 404,
-                okhttp3.ResponseBody.create(
+                ResponseBody.create(
                     "application/json".toMediaType(),
                     """{"message": "$message"}"""
                 )
@@ -299,11 +304,11 @@ class UserRepository {
         )
     }
 
-    private fun createServerException(message: String): retrofit2.HttpException {
-        return retrofit2.HttpException(
-            retrofit2.Response.error<User>(
+    private fun createServerException(message: String): HttpException {
+        return HttpException(
+            Response.error<User>(
                 500,
-                okhttp3.ResponseBody.create(
+                ResponseBody.create(
                     "application/json".toMediaType(),
                     """{"message": "$message"}"""
                 )

@@ -1,4 +1,4 @@
-package com.sepanta.controlkit.errorhandler
+package com.sepanta.errorhandler
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -30,12 +30,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.sepanta.controlkit.errorhandler.examples.ContactForm
-import com.sepanta.controlkit.errorhandler.examples.FormValidationExample
-import com.sepanta.controlkit.errorhandler.examples.NetworkErrorExample
-import com.sepanta.controlkit.errorhandler.examples.SimpleApiExample
-import com.sepanta.controlkit.errorhandler.examples.mvvm.UserViewModel
-import com.sepanta.controlkit.errorhandler.ui.theme.ErrorHandlerTheme
+import com.sepanta.errorhandler.examples.ContactForm
+import com.sepanta.errorhandler.examples.FormValidationExample
+import com.sepanta.errorhandler.examples.NetworkErrorExample
+import com.sepanta.errorhandler.examples.SimpleApiExample
+import com.sepanta.errorhandler.examples.mvvm.UserViewModel
+import com.sepanta.errorhandler.ui.theme.ErrorHandlerTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

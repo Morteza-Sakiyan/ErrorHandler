@@ -1,4 +1,4 @@
-package com.sepanta.controlkit.errorhandler.ui.theme
+package com.sepanta.errorhandler.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

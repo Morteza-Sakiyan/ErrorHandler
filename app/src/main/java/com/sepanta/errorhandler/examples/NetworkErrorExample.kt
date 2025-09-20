@@ -1,4 +1,4 @@
-package com.sepanta.controlkit.errorhandler.examples
+package com.sepanta.errorhandler.examples
 
 import android.util.Log
 import com.sepanta.controlkit.errorhandler.*
@@ -9,7 +9,6 @@ import retrofit2.Response
 import okhttp3.ResponseBody
 import java.io.IOException
 import java.net.SocketTimeoutException
-import java.net.UnknownHostException
 
 /**
  * Comprehensive network error handling example

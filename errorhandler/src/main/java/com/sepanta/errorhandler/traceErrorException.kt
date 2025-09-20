@@ -1,10 +1,10 @@
-package com.sepanta.controlkit.errorhandler
+package com.sepanta.errorhandler
 /*
  *  File: ErrorEntityRegistry.kt
  *
  *  Created by morteza on 9/9/25.
  */
-import com.sepanta.controlkit.errorhandler.utils.convertErrorBody
+import com.sepanta.errorhandler.utils.convertErrorBody
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException

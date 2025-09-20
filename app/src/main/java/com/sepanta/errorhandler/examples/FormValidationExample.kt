@@ -1,6 +1,6 @@
-package com.sepanta.controlkit.errorhandler.examples
+package com.sepanta.errorhandler.examples
 
-import android.util.Log
+import android.util.Patterns
 import com.sepanta.controlkit.errorhandler.*
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.HttpException
@@ -172,7 +172,7 @@ class FormValidationExample {
     
     // Helper methods
     private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
     
     private fun isValidPhone(phone: String): Boolean {

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sepanta.controlkit.errorhandler"
+    namespace = "com.sepanta.errorhandler"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.sepanta.controlkit.errorhandler"
+        applicationId = "com.sepanta.errorhandler"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -40,9 +40,7 @@ android {
 }
 
 dependencies {
-//    implementation(project(":errorhandler"))
-    implementation("com.github.Morteza-Sakiyan:ErrorHandler:+")
-
+    implementation(project(":errorhandler"))
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
