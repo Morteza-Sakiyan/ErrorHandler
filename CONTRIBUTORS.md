@@ -4,7 +4,7 @@ Thank you to all the contributors who have helped make the ErrorHandler library 
 
 ## Core Contributors
 
-- **[Your Name]** - *Project Creator & Maintainer* - [@your-username](https://github.com/your-username)
+- **[Morteza Sakiyan]** - *Project Creator & Maintainer* - [@Morteza-Sakiyan](https://github.com/Morteza-Sakiyan)
 
 ## Contributors
 
@@ -15,7 +15,7 @@ Thank you to all the contributors who have helped make the ErrorHandler library 
 If you've contributed to this project, feel free to add yourself to this list! Please follow this format:
 
 ```markdown
-- **[Your Name]** - *Role* - [@your-username](https://github.com/your-username)
+- **[Your Name]** - *Role* - [@your-github-username](https://github.com/your-github-username)
 ```
 
 ## Recognition

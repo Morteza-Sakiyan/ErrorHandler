@@ -18,7 +18,7 @@ We take security vulnerabilities seriously. If you discover a security vulnerabi
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them via email to: [security@your-domain.com](mailto:security@your-domain.com)
+Instead, please report them via email to: [morteza.sakiyan@gmail.com](mailto:morteza.sakiyan@gmail.com)
 
 ### What to Include
 
@@ -123,7 +123,7 @@ fun handleUserInput(input: String): Result<String> {
 
 For security-related questions or concerns, please contact:
 
-- **Email**: [security@your-domain.com](mailto:security@your-domain.com)
+- **Email**: [morteza.sakiyan@gmail.com](mailto:morteza.sakiyan@gmail.com)
 - **GitHub Security**: Use GitHub's private vulnerability reporting feature
 
 ## Acknowledgments

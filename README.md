@@ -1,6 +1,6 @@
 # ErrorHandler Library
 
-[![Release](https://jitpack.io/v/Morteza-Sakiyan/ErrorHandlerExample.svg)](https://jitpack.io/#Morteza-Sakiyan/ErrorHandlerExample)
+[![Release](https://jitpack.io/v/Morteza-Sakiyan/ErrorHandler.svg)](https://jitpack.io/#Morteza-Sakiyan/ErrorHandler)
 [![API](https://img.shields.io/badge/API-24%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.10-blue.svg)](https://kotlinlang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -34,7 +34,7 @@ Add the dependency to your app's `build.gradle`:
 
 ```gradle
 dependencies {
-    implementation 'com.github.your-username:ErrorHandlerExample:version'
+    implementation 'com.github.Morteza-Sakiyan:ErrorHandler:version'
 }
 ```
 

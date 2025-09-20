@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":errorhandler"))
+//    implementation(project(":errorhandler"))
+    implementation("com.github.Morteza-Sakiyan:ErrorHandler:+")
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
